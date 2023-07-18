@@ -1,0 +1,15 @@
+{% extends "flight_control/base.html" %}
+{% block body %}
+<!DOCTYPE html>
+<html>
+<body>
+    <h2 class="card-title mt-3 text-center">Delete Airline</h2>
+    <form action="{% url 'delete_airline' airline_id=airline_id %}" method="post">
+        {% csrf_token %}
+        <label for="airline_id">Airline ID:</label>
+        <input type="text" name="airline_id" id="airline_id">
+        <input type="submit" value="Delete Airline">
+    </form>
+</body>
+</html>
+{% endblock %}

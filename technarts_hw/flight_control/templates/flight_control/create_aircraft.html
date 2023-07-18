@@ -1,0 +1,28 @@
+{% extends "flight_control/base.html" %}
+{% block body %}
+<!DOCTYPE html>
+<html>
+<body>
+    <h2 class="card-title mt-3 text-center">Create Aircraft</h2>
+    <form method="post" action="{% url 'create_aircraft' %}">
+        {% csrf_token %}
+        <label for="manufacturer_serial_number">Manufacturer Serial Number:</label>
+        <input type="text" name="manufacturer_serial_number"><br>
+    
+        <label for="type">Aircraft Type:</label>
+        <input type="text" name="type"><br>
+    
+        <label for="model">Model:</label>
+        <input type="text" name="model"><br>
+    
+        <label for="operator_airline">Operator Airline ID:</label>
+        <input type="text" name="operator_airline"><br>
+    
+        <label for="number_of_engines">Number of Engines:</label>
+        <input type="text" name="number_of_engines"><br>
+    
+        <input type="submit" value="Create">
+    </form>
+</body>
+</html>
+{% endblock body %}

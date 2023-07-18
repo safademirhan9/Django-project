@@ -1,0 +1,25 @@
+{% extends "flight_control/base.html" %}
+{% block body %}
+<!DOCTYPE html>
+<html>
+<body>
+    <h2 class="card-title mt-3 text-center">Create Airline</h2>
+    <form method="post" action="{% url 'create_airline' %}">
+        {% csrf_token %}
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required><br>
+
+        <label for="callsign">Callsign:</label>
+        <input type="text" name="callsign" id="callsign" required><br>
+
+        <label for="founded_year">Founded Year:</label>
+        <input type="text" name="founded_year" id="founded_year" required><br>
+
+        <label for="base_airport">Base Airport:</label>
+        <input type="text" name="base_airport" id="base_airport" required><br>
+
+        <button type="submit">Create</button>
+    </form>
+</body>
+</html>
+{% endblock %}

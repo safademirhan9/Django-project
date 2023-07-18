@@ -1,0 +1,15 @@
+{% extends "flight_control/base.html" %}
+{% block body %}
+<!DOCTYPE html>
+<html>
+<body>
+    <h2 class="card-title mt-3 text-center">Create Airline</h2>
+    <h1>List Airlines</h1>
+    <ul>
+        {% for airline in airlines %}
+        <li>{{ airline.name }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+{% endblock body %}

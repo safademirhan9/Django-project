@@ -1,0 +1,22 @@
+{% extends "flight_control/base.html" %}
+{% block body %}
+<!DOCTYPE html>
+<html>
+<body>
+    <h2 class="card-title mt-3 text-center">Retrieve Aircraft</h2>
+    <form method="get" action="{% url 'retrieve_aircraft' %}">
+        <label for="aircraft_id">Aircraft ID:</label>
+        <input type="text" name="aircraft_id" id="aircraft_id">
+        <input type="submit" value="Retrieve Aircraft">
+    </form>
+    <div>
+        <h3>Aircraft Details:</h3>
+        <p>Manufacturer Serial Number: {{ aircraft.manufacturer_serial_number }}</p>
+        <p>Aircraft Type: {{ aircraft.type }}</p>
+        <p>Model: {{ aircraft.model }}</p>
+        <p>Operator Airline: {{ aircraft.operator_airline }}</p>
+        <p>Number of Engines: {{ aircraft.number_of_engines }}</p>
+    </div>
+</body>
+</html>
+{% endblock %}
