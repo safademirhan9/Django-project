@@ -1,3 +1,10 @@
+**Task**
+odev_postman_collection adli dosya bir Postman Collection. Bunu Postman yazılımında import ettiğinde birkaç REST Web Service endpoint olduğunu göreceksin. Beklentimiz Django rest framework'ü kullanarak bu endpointleri çalıştırabilecek bir proje hazırlaman. Proje özünde havayolları ve onlara bağlı uçakların eklenebildiği, değiştirilebildiği ve listelenebildiği modüllerden ibaret. JWT Authentication kullanarak kullanıcının giriş yapıp yapmadığı kontrol edilecek.
+
+
+
+**README**
+
 - URL Cheatsheet: 
 
     List Airlines: http://localhost:8000/airline/list/
